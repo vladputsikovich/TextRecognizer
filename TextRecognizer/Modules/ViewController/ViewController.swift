@@ -57,9 +57,10 @@ final class ViewController: UIViewController {
         view.backgroundColor = .white
         createButtons()
         createLabel()
+        createNotificationsForKeyboard()
         
-        listenService.onChangedState = { [weak self] state in
-            switch state {
+        listenService.onChangedState = { [weak self] listenState in
+            switch listenState {
             case .play:
                 self?.soundButton.setImage(
                     ImageKey.pause.image?.withRenderingMode(.alwaysTemplate),
@@ -76,20 +77,6 @@ final class ViewController: UIViewController {
         scanService.onChangedText = { [weak self] text in
             self?.textView.text += text
         }
-        
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(keyboardWillShow),
-            name: UIResponder.keyboardWillShowNotification,
-            object: nil
-        )
-        
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(keyboardWillHide),
-            name: UIResponder.keyboardWillHideNotification,
-            object: nil
-        )
     }
     
     // MARK: UI elements
@@ -109,7 +96,8 @@ final class ViewController: UIViewController {
         soundButton.addAction(
             UIAction(
                 handler: { [weak self] _ in
-                    self?.listenService.translateTextToSound(text: self?.textView.text ?? "")
+                    guard let self = self else { return }
+                    self.listenService.translateTextToSound(text: self.textView.text ?? "")
                 }
             ), for: .touchUpInside
         )
@@ -119,7 +107,8 @@ final class ViewController: UIViewController {
         scanButton.addAction(
             UIAction(
                 handler: { [weak self] _ in
-                    self?.presentScanner()
+                    guard let self = self else { return }
+                    self.presentScanner()
                 }
             ), for: .touchUpInside
         )
@@ -133,7 +122,8 @@ final class ViewController: UIViewController {
         clearButton.addAction(
             UIAction(
                 handler: { [weak self] _ in
-                    self?.textView.text = ""
+                    guard let self = self else { return }
+                    self.textView.text = ""
                 }
             ), for: .touchUpInside
         )
@@ -171,6 +161,22 @@ final class ViewController: UIViewController {
         let scanner = VNDocumentCameraViewController()
         scanner.delegate = scanService
         present(scanner, animated: true)
+    }
+    
+    private func createNotificationsForKeyboard() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillShow),
+            name: UIResponder.keyboardWillShowNotification,
+            object: nil
+        )
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillHide),
+            name: UIResponder.keyboardWillHideNotification,
+            object: nil
+        )
     }
     
     // MARK: - Methods to control keyboard
