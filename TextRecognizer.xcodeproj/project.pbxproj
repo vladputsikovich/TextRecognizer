@@ -7,15 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E91F97075429A4116C6348CB /* Pods_TextRecognizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBA29ED632B41E0CEEC1A6B2 /* Pods_TextRecognizer.framework */; };
 		ED88BA9527DB93F20003AC12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED88BA9427DB93F20003AC12 /* AppDelegate.swift */; };
 		ED88BA9727DB93F20003AC12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED88BA9627DB93F20003AC12 /* SceneDelegate.swift */; };
 		ED88BA9927DB93F20003AC12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED88BA9827DB93F20003AC12 /* ViewController.swift */; };
 		ED88BA9C27DB93F20003AC12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED88BA9A27DB93F20003AC12 /* Main.storyboard */; };
 		ED88BA9E27DB93F40003AC12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED88BA9D27DB93F40003AC12 /* Assets.xcassets */; };
 		ED88BAA127DB93F40003AC12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED88BA9F27DB93F40003AC12 /* LaunchScreen.storyboard */; };
+		EDCE1C3B27DF6F4B00D5AC05 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCE1C3A27DF6F4B00D5AC05 /* MainButton.swift */; };
+		EDCE1C3D27DF706300D5AC05 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCE1C3C27DF706300D5AC05 /* SecondaryButton.swift */; };
+		EDCE1C3F27DF7A5800D5AC05 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = EDCE1C3E27DF7A5800D5AC05 /* .gitignore */; };
+		EDF5305227DDFF91003DFD8F /* ScanService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF5305127DDFF91003DFD8F /* ScanService.swift */; };
+		EDF5305427DDFFA2003DFD8F /* ScanServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF5305327DDFFA2003DFD8F /* ScanServiceImpl.swift */; };
+		EDF5305627DE06E4003DFD8F /* ViewConrollerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF5305527DE06E4003DFD8F /* ViewConrollerAssembly.swift */; };
+		EDF5305D27DE85E9003DFD8F /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF5305C27DE85E9003DFD8F /* UIColor.swift */; };
+		EDFDC74E27DD2FD900E9BE54 /* ListenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFDC74D27DD2FD900E9BE54 /* ListenService.swift */; };
+		EDFDC75027DD310200E9BE54 /* ListenServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFDC74F27DD310200E9BE54 /* ListenServiceImpl.swift */; };
+		EDFDC75227DD31A600E9BE54 /* ImageKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFDC75127DD31A600E9BE54 /* ImageKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6667C2F80E3B64653278EC60 /* Pods-TextRecognizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextRecognizer.release.xcconfig"; path = "Target Support Files/Pods-TextRecognizer/Pods-TextRecognizer.release.xcconfig"; sourceTree = "<group>"; };
+		D5E82AB7DE66A4ADAD28BD87 /* Pods-TextRecognizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextRecognizer.debug.xcconfig"; path = "Target Support Files/Pods-TextRecognizer/Pods-TextRecognizer.debug.xcconfig"; sourceTree = "<group>"; };
 		ED88BA9127DB93F20003AC12 /* TextRecognizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextRecognizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED88BA9427DB93F20003AC12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED88BA9627DB93F20003AC12 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +37,17 @@
 		ED88BA9D27DB93F40003AC12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED88BAA027DB93F40003AC12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED88BAA227DB93F40003AC12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDCE1C3A27DF6F4B00D5AC05 /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
+		EDCE1C3C27DF706300D5AC05 /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
+		EDCE1C3E27DF7A5800D5AC05 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		EDF5305127DDFF91003DFD8F /* ScanService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanService.swift; sourceTree = "<group>"; };
+		EDF5305327DDFFA2003DFD8F /* ScanServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanServiceImpl.swift; sourceTree = "<group>"; };
+		EDF5305527DE06E4003DFD8F /* ViewConrollerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConrollerAssembly.swift; sourceTree = "<group>"; };
+		EDF5305C27DE85E9003DFD8F /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		EDFDC74D27DD2FD900E9BE54 /* ListenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenService.swift; sourceTree = "<group>"; };
+		EDFDC74F27DD310200E9BE54 /* ListenServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenServiceImpl.swift; sourceTree = "<group>"; };
+		EDFDC75127DD31A600E9BE54 /* ImageKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageKey.swift; sourceTree = "<group>"; };
+		FBA29ED632B41E0CEEC1A6B2 /* Pods_TextRecognizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextRecognizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +55,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E91F97075429A4116C6348CB /* Pods_TextRecognizer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B086EAA0B1E247C22D35AB2E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FBA29ED632B41E0CEEC1A6B2 /* Pods_TextRecognizer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE4713B47BEA301F9EB3943C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D5E82AB7DE66A4ADAD28BD87 /* Pods-TextRecognizer.debug.xcconfig */,
+				6667C2F80E3B64653278EC60 /* Pods-TextRecognizer.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		ED88BA8827DB93F20003AC12 = {
 			isa = PBXGroup;
 			children = (
+				EDCE1C3E27DF7A5800D5AC05 /* .gitignore */,
 				ED88BA9327DB93F20003AC12 /* TextRecognizer */,
 				ED88BA9227DB93F20003AC12 /* Products */,
+				DE4713B47BEA301F9EB3943C /* Pods */,
+				B086EAA0B1E247C22D35AB2E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +101,88 @@
 		ED88BA9327DB93F20003AC12 /* TextRecognizer */ = {
 			isa = PBXGroup;
 			children = (
-				ED88BA9427DB93F20003AC12 /* AppDelegate.swift */,
-				ED88BA9627DB93F20003AC12 /* SceneDelegate.swift */,
-				ED88BA9827DB93F20003AC12 /* ViewController.swift */,
-				ED88BA9A27DB93F20003AC12 /* Main.storyboard */,
-				ED88BA9D27DB93F40003AC12 /* Assets.xcassets */,
-				ED88BA9F27DB93F40003AC12 /* LaunchScreen.storyboard */,
-				ED88BAA227DB93F40003AC12 /* Info.plist */,
+				EDF5305927DE0D52003DFD8F /* Modules */,
+				EDF5305827DE0D17003DFD8F /* Resources */,
+				EDF5305727DE0CCB003DFD8F /* AppFiles */,
+				EDFDC74A27DD2F9A00E9BE54 /* Services */,
 			);
 			path = TextRecognizer;
+			sourceTree = "<group>";
+		};
+		EDF5305727DE0CCB003DFD8F /* AppFiles */ = {
+			isa = PBXGroup;
+			children = (
+				ED88BAA227DB93F40003AC12 /* Info.plist */,
+				ED88BA9427DB93F20003AC12 /* AppDelegate.swift */,
+				ED88BA9627DB93F20003AC12 /* SceneDelegate.swift */,
+				ED88BA9A27DB93F20003AC12 /* Main.storyboard */,
+				ED88BA9F27DB93F40003AC12 /* LaunchScreen.storyboard */,
+			);
+			path = AppFiles;
+			sourceTree = "<group>";
+		};
+		EDF5305827DE0D17003DFD8F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ED88BA9D27DB93F40003AC12 /* Assets.xcassets */,
+				EDFDC75127DD31A600E9BE54 /* ImageKey.swift */,
+				EDF5305C27DE85E9003DFD8F /* UIColor.swift */,
+				EDCE1C3A27DF6F4B00D5AC05 /* MainButton.swift */,
+				EDCE1C3C27DF706300D5AC05 /* SecondaryButton.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EDF5305927DE0D52003DFD8F /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				EDF5305A27DE0D59003DFD8F /* ViewController */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		EDF5305A27DE0D59003DFD8F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ED88BA9827DB93F20003AC12 /* ViewController.swift */,
+				EDF5305B27DE0D60003DFD8F /* Assembly */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EDF5305B27DE0D60003DFD8F /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				EDF5305527DE06E4003DFD8F /* ViewConrollerAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		EDFDC74A27DD2F9A00E9BE54 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EDFDC74C27DD2FC200E9BE54 /* Scan */,
+				EDFDC74B27DD2FB600E9BE54 /* Listen */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EDFDC74B27DD2FB600E9BE54 /* Listen */ = {
+			isa = PBXGroup;
+			children = (
+				EDFDC74D27DD2FD900E9BE54 /* ListenService.swift */,
+				EDFDC74F27DD310200E9BE54 /* ListenServiceImpl.swift */,
+			);
+			path = Listen;
+			sourceTree = "<group>";
+		};
+		EDFDC74C27DD2FC200E9BE54 /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				EDF5305127DDFF91003DFD8F /* ScanService.swift */,
+				EDF5305327DDFFA2003DFD8F /* ScanServiceImpl.swift */,
+			);
+			path = Scan;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +192,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED88BAA527DB93F40003AC12 /* Build configuration list for PBXNativeTarget "TextRecognizer" */;
 			buildPhases = (
+				5EE61EB5B1E0B397E8EAAFCF /* [CP] Check Pods Manifest.lock */,
 				ED88BA8D27DB93F20003AC12 /* Sources */,
 				ED88BA8E27DB93F20003AC12 /* Frameworks */,
 				ED88BA8F27DB93F20003AC12 /* Resources */,
+				83F2F1AA129E370036FC82AA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDCE1C3F27DF7A5800D5AC05 /* .gitignore in Resources */,
 				ED88BAA127DB93F40003AC12 /* LaunchScreen.storyboard in Resources */,
 				ED88BA9E27DB93F40003AC12 /* Assets.xcassets in Resources */,
 				ED88BA9C27DB93F20003AC12 /* Main.storyboard in Resources */,
@@ -133,14 +254,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5EE61EB5B1E0B397E8EAAFCF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TextRecognizer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83F2F1AA129E370036FC82AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TextRecognizer/Pods-TextRecognizer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TextRecognizer/Pods-TextRecognizer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TextRecognizer/Pods-TextRecognizer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ED88BA8D27DB93F20003AC12 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDCE1C3D27DF706300D5AC05 /* SecondaryButton.swift in Sources */,
+				EDF5305627DE06E4003DFD8F /* ViewConrollerAssembly.swift in Sources */,
+				EDF5305427DDFFA2003DFD8F /* ScanServiceImpl.swift in Sources */,
 				ED88BA9927DB93F20003AC12 /* ViewController.swift in Sources */,
+				EDFDC75227DD31A600E9BE54 /* ImageKey.swift in Sources */,
 				ED88BA9527DB93F20003AC12 /* AppDelegate.swift in Sources */,
+				EDFDC75027DD310200E9BE54 /* ListenServiceImpl.swift in Sources */,
+				EDFDC74E27DD2FD900E9BE54 /* ListenService.swift in Sources */,
 				ED88BA9727DB93F20003AC12 /* SceneDelegate.swift in Sources */,
+				EDCE1C3B27DF6F4B00D5AC05 /* MainButton.swift in Sources */,
+				EDF5305227DDFF91003DFD8F /* ScanService.swift in Sources */,
+				EDF5305D27DE85E9003DFD8F /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +456,7 @@
 		};
 		ED88BAA627DB93F40003AC12 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5E82AB7DE66A4ADAD28BD87 /* Pods-TextRecognizer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -291,12 +464,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DM8SQLY2K5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TextRecognizer/Info.plist;
+				INFOPLIST_FILE = TextRecognizer/AppFiles/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app usage Camera (change this)";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,6 +487,7 @@
 		};
 		ED88BAA727DB93F40003AC12 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6667C2F80E3B64653278EC60 /* Pods-TextRecognizer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -319,12 +495,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DM8SQLY2K5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TextRecognizer/Info.plist;
+				INFOPLIST_FILE = TextRecognizer/AppFiles/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app usage Camera (change this)";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
