@@ -8,7 +8,7 @@
 import AVFoundation
 
 protocol ListenService: AVSpeechSynthesizerDelegate {
-    var onChangedState: ((ListenState) -> ())? { get set }
+    var onChangedState: ((ListenStates) -> ())? { get set }
     func initialize()
     func translateTextToSound(text: String)
 }

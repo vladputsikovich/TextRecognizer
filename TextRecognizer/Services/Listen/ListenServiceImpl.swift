@@ -7,7 +7,7 @@
 
 import AVFoundation
 
-enum ListenState {
+enum ListenStates {
     case play
     case pause
 }
@@ -25,7 +25,7 @@ class ListenServiceImpl: NSObject, ListenService {
         synthesizer.delegate = self
     }
     
-    var onChangedState: ((ListenState) -> ())?
+    var onChangedState: ((ListenStates) -> ())?
     
     func translateTextToSound(text: String) {
         if synthesizer.isPaused {
