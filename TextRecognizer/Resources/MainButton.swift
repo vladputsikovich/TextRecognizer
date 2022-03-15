@@ -10,6 +10,8 @@ import UIKit
 
 class MainButton: UIButton {
     
+    var onTapped: (() -> Void)?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -30,5 +32,14 @@ class MainButton: UIButton {
         layer.borderColor = UIColor.white.cgColor
         backgroundColor = .systemGray
         tintColor = .white
+        addAction(
+            UIAction(
+                handler: { [weak self] _ in
+                    guard let self = self else { return }
+                    self.onTapped?()
+                }
+            ),
+            for: .touchUpInside
+        )
     }
 }

@@ -14,6 +14,7 @@ import SnapKit
 
 fileprivate struct Constants {
     static let navigationTitle = "Scan and Listen"
+    static let defaultText = "Tap button bellow to start recognize"
 }
 
 final class ViewController: UIViewController {
@@ -60,14 +61,15 @@ final class ViewController: UIViewController {
         createNotificationsForKeyboard()
         
         listenService.onChangedState = { [weak self] listenState in
+            guard let self = self else { return }
             switch listenState {
             case .play:
-                self?.soundButton.setImage(
+                self.soundButton.setImage(
                     ImageKey.pause.image?.withRenderingMode(.alwaysTemplate),
                     for: .normal
                 )
             case .pause:
-                self?.soundButton.setImage(
+                self.soundButton.setImage(
                     ImageKey.listen.image?.withRenderingMode(.alwaysTemplate),
                     for: .normal
                 )
@@ -75,7 +77,8 @@ final class ViewController: UIViewController {
         }
         
         scanService.onChangedText = { [weak self] text in
-            self?.textView.text += text
+            guard let self = self else { return }
+            self.textView.text += text
         }
     }
     
@@ -93,25 +96,17 @@ final class ViewController: UIViewController {
         buttonsStackView.spacing = view.frame.width / 10
         buttonsStackView.backgroundColor = .blueGreen
         
-        soundButton.addAction(
-            UIAction(
-                handler: { [weak self] _ in
-                    guard let self = self else { return }
-                    self.listenService.translateTextToSound(text: self.textView.text ?? "")
-                }
-            ), for: .touchUpInside
-        )
+        soundButton.onTapped = { [weak self] in
+            guard let self = self else { return }
+            self.listenService.translateTextToSound(text: self.scanService.text)
+        }
         
         scanButtonView.addSubview(scanButton)
         
-        scanButton.addAction(
-            UIAction(
-                handler: { [weak self] _ in
-                    guard let self = self else { return }
-                    self.presentScanner()
-                }
-            ), for: .touchUpInside
-        )
+        scanButton.onTapped = { [weak self] in
+            guard let self = self else { return }
+            self.presentScanner()
+        }
         
         scanButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
@@ -119,14 +114,10 @@ final class ViewController: UIViewController {
             make.height.width.equalTo(view.frame.width / 4)
         }
         
-        clearButton.addAction(
-            UIAction(
-                handler: { [weak self] _ in
-                    guard let self = self else { return }
-                    self.textView.text = ""
-                }
-            ), for: .touchUpInside
-        )
+        clearButton.onTapped = { [weak self] in
+            guard let self = self else { return }
+            self.textView.text = ""
+        }
         
         buttonsStackView.snp.makeConstraints { make in
             make.bottom.equalToSuperview()
@@ -144,7 +135,7 @@ final class ViewController: UIViewController {
         textView.backgroundColor = .white
         textView.font = .systemFont(ofSize: view.frame.width / 18)
         
-        textView.text = "Tap button bellow to start recognize"
+        textView.text = Constants.defaultText
         
         textView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide)
@@ -162,6 +153,8 @@ final class ViewController: UIViewController {
         scanner.delegate = scanService
         present(scanner, animated: true)
     }
+    
+    // MARK: - Keyboard notifications
     
     private func createNotificationsForKeyboard() {
         NotificationCenter.default.addObserver(

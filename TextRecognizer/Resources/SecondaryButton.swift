@@ -29,6 +29,8 @@ class SecondaryButton: UIButton {
     
     private var type: TypeButton
     
+    var onTapped: (() -> Void)?
+    
     init(buttonType: TypeButton) {
         self.type = buttonType
         super.init(frame: .zero)
@@ -41,6 +43,15 @@ class SecondaryButton: UIButton {
     
     private func setup() {
         setImage(type.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+        addAction(
+            UIAction(
+                handler: { [weak self] _ in
+                    guard let self = self else { return }
+                    self.onTapped?()
+                }
+            ),
+            for: .touchUpInside
+        )
         tintColor = .white
     }
 }
