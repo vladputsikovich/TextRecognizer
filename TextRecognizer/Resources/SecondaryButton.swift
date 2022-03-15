@@ -27,9 +27,13 @@ enum TypeButton {
 
 class SecondaryButton: UIButton {
     
+    // MARK: - Properties
+    
     private var type: TypeButton
     
     var onTapped: (() -> Void)?
+    
+    // MARK: - Init
     
     init(buttonType: TypeButton) {
         self.type = buttonType
@@ -40,6 +44,8 @@ class SecondaryButton: UIButton {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: - Setup
     
     private func setup() {
         setImage(type.image?.withRenderingMode(.alwaysTemplate), for: .normal)

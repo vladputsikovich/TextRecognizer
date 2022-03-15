@@ -10,7 +10,11 @@ import UIKit
 
 class MainButton: UIButton {
     
+    // MARK: - Properties
+    
     var onTapped: (() -> Void)?
+    
+    // MARK: - Init
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,6 +29,8 @@ class MainButton: UIButton {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: - Setup
     
     private func setup() {
         setImage(ImageKey.camera.image?.withRenderingMode(.alwaysTemplate), for: .normal)
