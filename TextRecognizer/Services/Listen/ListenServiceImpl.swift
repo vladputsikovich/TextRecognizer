@@ -14,7 +14,13 @@ enum ListenStates {
 
 class ListenServiceImpl: NSObject, ListenService {
     
-    let synthesizer = AVSpeechSynthesizer ()
+    // MARK: - Properties
+    
+    let synthesizer = AVSpeechSynthesizer()
+    
+    var onChangedState: ((ListenStates) -> ())?
+    
+    // MARK: - Init
     
     override init() {
         super.init()
@@ -25,7 +31,8 @@ class ListenServiceImpl: NSObject, ListenService {
         synthesizer.delegate = self
     }
     
-    var onChangedState: ((ListenStates) -> ())?
+    // MARK: - Translate func
+    // Function translate text to sound
     
     func translateTextToSound(text: String) {
         if synthesizer.isPaused {
@@ -41,13 +48,15 @@ class ListenServiceImpl: NSObject, ListenService {
         else if !synthesizer.isSpeaking {
             let utterance = AVSpeechUtterance(string: text)
             utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
-            utterance.rate = 0.3
+            utterance.rate = 0.5
         
             synthesizer.speak(utterance)
             onChangedState?(.pause)
         }
     }
 }
+
+// MARK: - AVSpeechSynthesizerDelegate
 
 extension ListenServiceImpl {
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {

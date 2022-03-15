@@ -10,6 +10,10 @@ import VisionKit
 
 class ScanServiceImpl: NSObject, ScanService {
     
+    // MARK: - Properties
+    
+    var text = ""
+    
     var onChangedText: ((String) -> Void)?
     
     // MARK: - Queue property
@@ -26,24 +30,25 @@ class ScanServiceImpl: NSObject, ScanService {
     // MARK: - Text Recognition Request
     
     lazy var textRecognitionRequest: VNRecognizeTextRequest = {
-        let req = VNRecognizeTextRequest { (request, error) in
+        let req = VNRecognizeTextRequest { [weak self] (request, error) in
+            guard let self = self else { return }
             guard let observations = request.results as? [VNRecognizedTextObservation] else { return }
             
-            var resultText = ""
+            self.text = ""
             for observation in observations {
                 guard let topCandidate = observation.topCandidates(1).first else { return }
-                resultText += topCandidate.string
-                resultText += "\n"
+                self.text += topCandidate.string
+                self.text += "\n"
             }
             
-            DispatchQueue.main.async { [weak self] in
-                self?.onChangedText?(resultText)
+            DispatchQueue.main.async {
+                self.onChangedText?(self.text)
             }
         }
         return req
     }()
 
-    // MARK: - Scan
+    // MARK: - Recognize text from image
     
     func recognizeText(inImage: UIImage) {
         guard let cgImage = inImage.cgImage else { return }

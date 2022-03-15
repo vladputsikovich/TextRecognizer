@@ -9,6 +9,7 @@ import Vision
 import VisionKit
 
 protocol ScanService: VNDocumentCameraViewControllerDelegate {
+    var text: String { get set }
     var onChangedText: ((String) -> Void)? { get set }
     func recognizeText(inImage: UIImage)
 }
